@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accident Report System</title>
+  </head>
+  <body>
+    <!-- Main container for the entire page -->
+    <div>
+      <!-- Header Section -->
+      <header>
+        <h1 style="text-align: center">Accident Report System</h1>
+        <p style="text-align: center">
+          Providing a platform for reporting and viewing accident data.
+        </p>
+      </header>
+
+      <!-- Main content area -->
+      <main>
+        <!-- Information Section with a list -->
+        <section>
+          <h2>Quick Information</h2>
+          <p>This system allows users to:</p>
+          <ul>
+            <li>File a new accident report.</li>
+            <li>View a list of recent reported accidents.</li>
+            <li>Provide detailed information and media evidence.</li>
+          </ul>
+        </section>
+
+        <!-- Emergency Services List -->
+        <section>
+          <h2>Emergency Services</h2>
+          <p>
+            Call the appropriate service below for immediate assistance before
+            filing a report:
+          </p>
+          <ol>
+            <li>
+              North America (USA/Canada): Ambulance/Police/Fire
+              <strong><a href="tel:911">911</a></strong>
+            </li>
+            <li>
+              Europe (Germany/France): Ambulance/Police/Fire
+              <strong><a href="tel:112">112</a></strong>
+            </li>
+            <li>
+              Africa (Nigeria): Ambulance/Police/Fire
+              <strong><a href="tel:112">112</a></strong>
+            </li>
+            <li>
+              Africa (South Africa): Police
+              <strong><a href="tel:10111">10111</a></strong
+              >, Ambulance <strong><a href="tel:10177">10177</a></strong>
+            </li>
+            <li>
+              Africa (Kenya): All services
+              <strong><a href="tel:999">999</a></strong>
+            </li>
+            <li>
+              Africa (Egypt): Police <strong><a href="tel:122">122</a></strong
+              >, Ambulance <strong><a href="tel:123">123</a></strong
+              >, Fire <strong><a href="tel:180">180</a></strong>
+            </li>
+            <li>
+              Africa (Morocco): Ambulance/Fire
+              <strong><a href="tel:15">15</a></strong
+              >, Police <strong><a href="tel:19">19</a></strong>
+            </li>
+            <li>
+              South America (Brazil): Police
+              <strong><a href="tel:190">190</a></strong
+              >, Ambulance <strong><a href="tel:192">192</a></strong
+              >, Fire <strong><a href="tel:193">193</a></strong>
+            </li>
+            <li>
+              South America (Argentina): All services
+              <strong><a href="tel:911">911</a></strong>
+            </li>
+          </ol>
+        </section>
+        <!-- Table of Reported Accidents -->
+        <section>
+          <h2>Recent Reported Accidents</h2>
+          <table border="1" width="100%" cellpadding="10" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Report ID</th>
+                <th>Location</th>
+                <th>Reported Damages</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#001</td>
+                <td>Main Street & Oak Avenue</td>
+                <td>Major vehicle damage, minor property damage.</td>
+              </tr>
+              <tr>
+                <td>#002</td>
+                <td>Highway 101, near mile marker 56</td>
+                <td>Total loss of two vehicles, road debris.</td>
+              </tr>
+              <tr>
+                <td>#003</td>
+                <td>Elm Street, near the park entrance</td>
+                <td>Minor fender bender, no significant damages.</td>
+              </tr>
+              <!-- Manually added row to show how a new report would appear -->
+              <tr>
+                <td>#004</td>
+                <td>Pine Street, at the intersection with Maple</td>
+                <td>Significant front-end damage to one car.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Media Section with a video -->
+        <section>
+          <h2>Video Evidence</h2>
+          <p>
+            This section would display a video related to an accident report.
+            Note: The video below is a placeholder and not a real accident.
+          </p>
+          <video width="100%" controls>
+            <source
+              src="https://assets.mixkit.co/videos/47109/47109-720.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </section>
+
+        <!-- Form to Submit a New Accident Report -->
+        <section>
+          <h2>Submit a New Accident Report</h2>
+          <form action="#" method="get">
+            <fieldset>
+              <legend>Report Details</legend>
+              <p>
+                <label for="reporter-name">Reporter's Full Name:</label><br />
+                <input
+                  type="text"
+                  id="reporter-name"
+                  name="reporter-name"
+                  required
+                  minlength="4"
+                  maxlength="50"
+                />
+              </p>
+              <p>
+                <label for="accident-date">Date of Accident:</label><br />
+                <input
+                  type="date"
+                  id="accident-date"
+                  name="accident-date"
+                  required
+                />
+              </p>
+              <p>
+                <label for="accident-time">Time of Accident:</label><br />
+                <input
+                  type="time"
+                  id="accident-time"
+                  name="accident-time"
+                  required
+                />
+              </p>
+              <p>
+                <label for="location">Accident Location:</label><br />
+                <textarea
+                  id="location"
+                  name="location"
+                  rows="4"
+                  cols="50"
+                  required
+                ></textarea>
+              </p>
+              <p>
+                <label for="damages">Description of Damages:</label><br />
+                <textarea
+                  id="damages"
+                  name="damages"
+                  rows="4"
+                  cols="50"
+                  required
+                ></textarea>
+              </p>
+            </fieldset>
+
+            <fieldset>
+              <legend>Contact Information & Evidence</legend>
+              <p>
+                <label for="reporter-email">Email Address:</label><br />
+                <input
+                  type="email"
+                  id="reporter-email"
+                  name="reporter-email"
+                  required
+                />
+              </p>
+              <!-- Updated phone number section with country dropdown -->
+              <p>
+                <label for="country">Country</label><br />
+                <select id="country" name="country">
+                  <option value="Nigeria" selected>Nigeria (+234)</option>
+                  <option value="South Africa">South Africa (+27)</option>
+                  <option value="Kenya">Kenya (+254)</option>
+                  <option value="Egypt">Egypt (+20)</option>
+                  <option value="Morocco">Morocco (+212)</option>
+                  <option value="Germany">Germany (+49)</option>
+                  <option value="France">France (+33)</option>
+                  <option value="Brazil">Brazil (+55)</option>
+                  <option value="Argentina">Argentina (+54)</option>
+                  <option value="USA">USA (+1)</option>
+                  <option value="Canada">Canada (+1)</option>
+                </select>
+              </p>
+              <p>
+                <label for="reporter-phone">Phone Number (with call code)</label
+                ><br />
+                <input
+                  type="tel"
+                  id="reporter-phone"
+                  name="reporter-phone"
+                  pattern="\+[0-9]{1,4}[0-9]{9,15}"
+                  required
+                />
+                <small>Format: +2348012345678</small>
+              </p>
+              <p>
+                <label for="upload-image">Upload Photo Evidence:</label><br />
+                <input
+                  type="file"
+                  id="upload-image"
+                  name="upload-image"
+                  accept="image/*"
+                />
+              </p>
+              <p>
+                <label for="terms">
+                  <input type="checkbox" id="terms" name="terms" required />
+                  I confirm the information provided is accurate to the best of
+                  my knowledge.
+                </label>
+              </p>
+            </fieldset>
+
+            <p>
+              <button type="submit">Submit Report</button>
+            </p>
+          </form>
+        </section>
+      </main>
+
+      <!-- Footer Section -->
+      <footer>
+        <p style="text-align: center">
+          &copy; 2025 Teesar's Accident Report System. All rights reserved.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
